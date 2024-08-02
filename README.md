@@ -22,7 +22,9 @@ Repository ini berisi implementasi dalam mencari solusi string matching dengan v
 </p>
 
 ## **Requirements Program**
-Program ini membutuhkan Python3 (Program ini dibuat di Python 3.12 sehingga disarankan menggunakan Python 3.12)
+1. Python3 (Program ini dibuat di Python 3.12 sehingga disarankan menggunakan Python 3.12)
+2. networkx (Library Python)
+3. pillow (Library Python)
 
 ## **Set Up dan Build Program**
 1. Download file .zip
