@@ -67,7 +67,6 @@ Output 2:
 Input 3:
 
 <img src="img/in3.png">
-Konten JSON sengaja dikasih enter agar terlihat semua textnya (Sebenarnya tidak di enter)
 
 Output 3:
 
