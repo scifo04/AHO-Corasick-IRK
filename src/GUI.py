@@ -87,7 +87,7 @@ class MainPage:
         if self.file_path != "":
             self.solution_pack = AHOCorasick(self.file_path)
         for i in self.solution_pack.hashmap:
-            self.output_content.append(f'Pattern "{i}" found {len(self.solution_pack.hashmap[i])} times at indices {self.solution_pack.hashmap[i]}\n')
+            self.output_content.append(f'Pattern "{i}" found {len(self.solution_pack.hashmap[i])}x at indexes {self.solution_pack.hashmap[i]}\n')
         self.text_output.config(state=tk.NORMAL)
         self.text_output.delete("1.0", tk.END)
         for i in self.output_content:
