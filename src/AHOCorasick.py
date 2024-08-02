@@ -38,9 +38,10 @@ class AHOCorasick:
             if (res != -1 and len(tree.children) > 0):
                 fail = tree.children[res].failure_link
                 tree = tree.children[res]
-                if (len(tree.children) == 0 and saved_string in self.unpacker.patterns):
+                if (saved_string in self.unpacker.patterns):
                     self.hashmap[saved_string].append((i-len(saved_string)+1,i))
-                    tree = tree.failure_link
+                    if (len(tree.children) == 0):
+                        tree = tree.failure_link
                     print("APPEND")
             else:
                 while True:
@@ -51,8 +52,9 @@ class AHOCorasick:
                         if (res != -1 and len(tree.children) > 0):
                             fail = tree.children[res].failure_link
                             tree = tree.children[res]
-                            if (len(tree.children) == 0 and saved_string in self.unpacker.patterns):
+                            if (saved_string in self.unpacker.patterns):
                                 self.hashmap[saved_string].append((i-len(saved_string)+1,i))
+                                tree = tree.failure_link
                                 print("APPEND")
                         break
 
@@ -61,9 +63,10 @@ class AHOCorasick:
                     if (res != -1 and len(tree.children) > 0):
                         tree = tree.children[res]
                         fail = tree.failure_link
-                        if (len(tree.children) == 0 and saved_string in self.unpacker.patterns):
-                                self.hashmap[saved_string].append((i-len(saved_string)+1,i))
-                                print("APPEND")
+                        if (saved_string in self.unpacker.patterns):
+                            self.hashmap[saved_string].append((i-len(saved_string)+1,i))
+                            tree = tree.failure_link
+                            print("APPEND")
                         break
                     else:
                         fail = tree.failure_link

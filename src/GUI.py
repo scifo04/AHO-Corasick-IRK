@@ -83,6 +83,7 @@ class MainPage:
         self.construct_chosen_file()
 
     def solve_file(self):
+        self.output_content = []
         if self.file_path != "":
             self.solution_pack = AHOCorasick(self.file_path)
         for i in self.solution_pack.hashmap:
