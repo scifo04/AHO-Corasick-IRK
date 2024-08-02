@@ -67,14 +67,15 @@ Output 2:
 Input 3:
 
 <img src="img/in3.png">
+Konten JSON sengaja dikasih enter agar terlihat semua textnya (Sebenarnya tidak di enter)
 
 Output 3:
 
 <img src="img/out3.png">
 
-Visualisasi 3:
+Visualisasi:
 
-<img src="img/vis3.png">
+<img src="img/vis.png">
 
 </p>
 
