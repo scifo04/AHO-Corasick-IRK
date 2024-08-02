@@ -15,7 +15,7 @@
 ## **Deskripsi Program**
 
 <p align="justify">
-Word ladder (juga dikenal sebagai Doublets, word-links, change-the-word puzzles, paragrams, laddergrams, atau word golf) adalah salah satu permainan kata yang terkenal bagi seluruh kalangan. Word ladder ditemukan oleh Lewis Carroll, seorang penulis dan matematikawan, pada tahun 1877. Pada permainan ini, pemain diberikan dua kata yang disebut sebagai start word dan end word. Untuk memenangkan permainan, pemain harus menemukan rantai kata yang dapat menghubungkan antara start word dan end word. Banyaknya huruf pada start word dan end word selalu sama. Tiap kata yang berdekatan dalam rantai kata tersebut hanya boleh berbeda satu huruf saja. Pada permainan ini, diharapkan solusi optimal, yaitu solusi yang meminimalkan banyaknya kata yang dimasukkan pada rantai kata.
+Algoritma Aho–Corasick adalah algoritma pencarian string yang ditemukan oleh Alfred V. Aho dan Margaret J. Corasick pada tahun 1975. Ini adalah sejenis algoritma pencocokan kamus yang menempatkan elemen dari kumpulan string yang terbatas ("kamus") dalam sebuah Masukkan teks. Ini cocok dengan semua string secara bersamaan. Kompleksitas algoritma ini linier dalam panjang string ditambah panjang teks yang dicari ditambah jumlah keluaran yang cocok.
 
 Repository ini berisi implementasi dalam mencari solusi terdekat dari sebuah permainan Word Ladder dan membandingkan ketiga algoritma UCS, Greedy Best First Search, dan A*
 
