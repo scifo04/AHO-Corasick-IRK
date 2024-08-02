@@ -10,19 +10,22 @@ class AHOCorasick:
     hashmap: dict
     start_track: int
     end_track: int
+    to_graph: List[str]
 
     def __init__ (self, path):
         self.file_path = path
         self.unpacker = QueryUnpacker(path)
         self.solution_list = []
-        self.automaton = Automaton(self.unpacker.patterns)
         self.hashmap = {}
         for i in range(len(self.unpacker.patterns)):
+            self.unpacker.patterns[i] = self.unpacker.patterns[i].lower()
             self.hashmap[self.unpacker.patterns[i]] = []
+        self.automaton = Automaton(self.unpacker.patterns)
         self.unpacker.text = self.unpacker.text.lower()
         self.solve()
         for i in self.hashmap:
             print(i,self.hashmap[i])
+        self.to_graph = self.automaton.create_directed_graphs()
         
     def solve (self):
         text = self.unpacker.text

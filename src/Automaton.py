@@ -120,3 +120,12 @@ class Automaton:
             if (self.address[i].letter == match):
                 return self.address[i]
         return None
+    
+    def create_directed_graphs(self):
+        liste = []
+        for i in range(len(self.address)):
+            for j in range(len(self.address[i].children)):
+                liste.append((self.address[i].letter,self.address[i].children[j].letter))
+            liste.append((self.address[i].letter,self.address[i].failure_link.letter))
+        liste = list(set(liste))
+        return liste
